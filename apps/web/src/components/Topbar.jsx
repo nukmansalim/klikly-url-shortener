@@ -64,7 +64,7 @@ const languages = [
   { code: "ko", label: "한국어", flag: "🇰🇷" },
 ];
 
-export default function Topbar({ activeTab }) {
+export default function Topbar({ activeTab, setMobileMenuOpen }) {
   const { darkMode, toggleDarkMode, lang, setLang, setPage } = useApp();
   const t = titles[activeTab] || titles.overview;
   const [notifOpen, setNotifOpen] = useState(false);
@@ -91,6 +91,17 @@ export default function Topbar({ activeTab }) {
       </div>
 
       <div className="flex items-center gap-3 topbar-actions">
+        {/* Mobile Menu Toggle */}
+        {setMobileMenuOpen && (
+          <button 
+            className="icon-btn mobile-menu-btn" 
+            onClick={() => setMobileMenuOpen(true)}
+            title="Open Menu"
+          >
+            <i className="fa-solid fa-bars"></i>
+          </button>
+        )}
+
         <label className="search-box">
           <i className="fa-solid fa-magnifying-glass"></i>
           <input type="text" placeholder="Cari link, campaign, atau QR..." />

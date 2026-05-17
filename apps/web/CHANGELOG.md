@@ -73,9 +73,9 @@ const { darkMode, toggleDarkMode, lang, setLang, page, setPage, activeTab, setAc
 | Tab | Status | Konten |
 |-----|--------|--------|
 | Overview | ✅ Aktif | StatsGrid + ChartSection |
-| Short Links | 🔄 Placeholder | Card "akan segera hadir" |
-| QR Code | 🔄 Placeholder | Card "akan segera hadir" |
-| Link-in-Bio | 🔄 Placeholder | Card "akan segera hadir" |
+| Short Links | ✅ Aktif | List Tautan + Modal Create Link |
+| QR Code | ✅ Aktif | Live Generator + Download |
+| Link-in-Bio | ✅ Aktif | Editor Form + Mobile Live Preview |
 | Campaign | 🔄 Placeholder | Card "akan segera hadir" |
 
 ### 5. Notification Dropdown
@@ -175,9 +175,9 @@ const { darkMode, toggleDarkMode, lang, setLang, page, setPage, activeTab, setAc
 
 ### Priority Tinggi
 1. **Isi konten tab placeholder:**
-   - [ ] Short Links page (tabel + form)
-   - [ ] QR Code page (generator + list)
-   - [ ] Link-in-Bio page (template + editor)
+   - [x] Short Links page (tabel + form)
+   - [x] QR Code page (generator + list)
+   - [x] Link-in-Bio page (template + editor)
    - [ ] Campaign page (list + analytics)
 
 2. **Integrasi bahasa ke seluruh UI:**
@@ -199,7 +199,7 @@ const { darkMode, toggleDarkMode, lang, setLang, page, setPage, activeTab, setAc
 
 5. **Responsive mobile:**
    - [ ] Mobile hamburger menu untuk landing
-   - [ ] Mobile sidebar collapse untuk dashboard
+   - [x] Mobile sidebar collapse untuk dashboard
    - [ ] Touch-friendly dropdowns
 
 6. **Performance:**
@@ -256,6 +256,7 @@ npm run preview
 | 11 | Tambah dark mode toggle & language switcher ke landing page |
 | 12 | Alihkan tombol "Dashboard" ke "Daftar Gratis" (langsung ke dashboard) |
 | 13 | Fix dark mode untuk testimonial card & link-in-bio phone mockup |
+| 14 | Implementasi UI tab Short Links, QR Code, Link-in-Bio, dan responsive sidebar mobile |
 
 ---
 

@@ -8,9 +8,16 @@ const navItems = [
   { icon: "fa-bullhorn", label: "Campaign", tab: "campaign" },
 ];
 
-export default function Sidebar({ activeTab, onTabChange }) {
+export default function Sidebar({ activeTab, onTabChange, mobileMenuOpen, setMobileMenuOpen }) {
   return (
-    <aside className="sidebar">
+    <>
+      {mobileMenuOpen && (
+        <div 
+          className="md:hidden fixed inset-0 bg-black/50 z-40 backdrop-blur-sm transition-opacity" 
+          onClick={() => setMobileMenuOpen(false)}
+        ></div>
+      )}
+      <aside className={`sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
       <div className="flex items-center gap-3 mb-10">
         <div className="brand-icon">K</div>
         <div>
@@ -24,7 +31,10 @@ export default function Sidebar({ activeTab, onTabChange }) {
           <div
             key={idx}
             className={`nav-item ${activeTab === item.tab ? "active" : ""}`}
-            onClick={() => onTabChange(item.tab)}
+            onClick={() => {
+              onTabChange(item.tab);
+              if (setMobileMenuOpen) setMobileMenuOpen(false);
+            }}
           >
             <i className={`fa-solid ${item.icon}`}></i>
             <span>{item.label}</span>
@@ -55,5 +65,6 @@ export default function Sidebar({ activeTab, onTabChange }) {
         </div>
       </div>
     </aside>
+    </>
   );
 }

@@ -241,6 +241,15 @@ input {
   color: var(--primary);
 }
 
+.mobile-menu-btn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: grid;
+  }
+}
+
 /* ── Content Area ── */
 .content {
   flex: 1;
@@ -1328,6 +1337,17 @@ input {
 @media (max-width: 768px) {
   .sidebar {
     display: none;
+  }
+  
+  .sidebar.mobile-open {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    z-index: 100;
+    box-shadow: 0 24px 60px rgba(13, 11, 97, 0.3);
   }
 
   .stats-grid {
