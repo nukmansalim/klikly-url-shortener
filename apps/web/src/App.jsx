@@ -2,15 +2,16 @@
 import React from "react";
 import "./App.css";
 import { useApp } from "./context/AppContext.jsx";
-import Dashboard from "./pages/dashboard";
-import Landing from "./pages/index";
+import { Outlet } from "react-router-dom";
+
+
 
 function App() {
-  const { page, darkMode } = useApp();
+  const { darkMode } = useApp();
 
   return (
     <div className={darkMode ? "dark" : ""} style={{ minHeight: "100vh" }}>
-      {page === "dashboard" ? <Dashboard /> : <Landing />}
+      <Outlet/>
     </div>
   );
 }

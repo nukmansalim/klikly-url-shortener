@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useApp } from "../context/AppContext.jsx";
 import Tabs from "../components/Tabs";
 import TestimonialMarquee from "../components/TestimonialMarquee";
-
+import { useNavigate } from "react-router-dom";
 const languages = [
   { code: "id", label: "Bahasa Indonesia", flag: "🇮🇩" },
   { code: "en", label: "English", flag: "🇬🇧" },
@@ -15,7 +15,7 @@ export default function Index() {
   const [activeTab, setActiveTab] = useState(0);
   const { darkMode, toggleDarkMode, lang, setLang, setPage } = useApp();
   const [settingsOpen, setSettingsOpen] = useState(false);
-
+let navigate = useNavigate();
   return (
     <div className="bg-zinc-50 text-gray-900">
       {/* Navbar */}
@@ -121,13 +121,13 @@ export default function Index() {
                 </>
               )}
             </div>
-
-            <button
-              onClick={() => setPage("dashboard")}
-              className="btn-primary px-7 py-3 text-white text-base font-semibold rounded-3xl"
-            >
-              Daftar Gratis
-            </button>
+              <button
+                // onClick={() => setPage("dashboard")}
+                onClick={() => navigate("/login")}
+                className="btn-primary px-7 py-3 text-white text-base font-semibold rounded-3xl"
+              >
+                Daftar Gratis
+              </button>
           </div>
         </div>
       </nav>
@@ -361,10 +361,10 @@ export default function Index() {
             <div>
               <h3 className="text-3xl font-bold mb-4 section-title">Monitoring Kampanye & Analitik</h3>
               <p className="section-subtitle text-lg leading-relaxed">
-                Pantau performa setiap link yang kamu bagikan secara real-time. 
-                Dari jumlah klik, lokasi pengunjung, perangkat yang digunakan, hingga waktu puncak traffic — 
-                semua data penting tersaji dalam dashboard yang intuitif. 
-                Dengan insight yang akurat, kamu bisa mengoptimalkan strategi marketing, 
+                Pantau performa setiap link yang kamu bagikan secara real-time.
+                Dari jumlah klik, lokasi pengunjung, perangkat yang digunakan, hingga waktu puncak traffic —
+                semua data penting tersaji dalam dashboard yang intuitif.
+                Dengan insight yang akurat, kamu bisa mengoptimalkan strategi marketing,
                 meningkatkan konversi, dan membuat keputusan bisnis yang lebih cerdas setiap harinya.
               </p>
 
