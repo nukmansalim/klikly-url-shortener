@@ -8,6 +8,12 @@ dist-ssr
 build
 *.local
 
+# Cursor AI config files
+cursor.md
+.cursorrules
+.cursorignore
+.cursor/
+
 # Logs
 logs
 *.log
@@ -21,6 +27,7 @@ lerna-debug.log*
 .env
 .env.local
 .env.*.local
+COMMIT_PLAN.md
 
 # Editor directories and files
 .vscode/*

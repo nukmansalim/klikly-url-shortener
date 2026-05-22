@@ -1,0 +1,666 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@klikly/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.6.1
+      postgres:
+        specifier: ^3.4.9
+        version: 3.4.9
+    devDependencies:
+      '@types/pg':
+        specifier: ^8.20.0
+        version: 8.20.0
+      pg:
+        specifier: ^8.21.0
+        version: 8.21.0
+      typescript:
+        specifier: ^5.8.0
+        version: 5.9.3
+
+  ../..: {}
+
+  ../../../Antigravity/resources/app: {}
+
+  ../../../Antigravity/resources/app/extensions/antigravity: {}
+
+  ../../../Antigravity/resources/app/extensions/antigravity-code-executor: {}
+
+  ../../../Antigravity/resources/app/extensions/antigravity-dev-containers: {}
+
+  ../../../Antigravity/resources/app/extensions/antigravity-remote-openssh: {}
+
+  ../../../Antigravity/resources/app/extensions/antigravity-remote-wsl: {}
+
+  ../../../Antigravity/resources/app/extensions/bat: {}
+
+  ../../../Antigravity/resources/app/extensions/clojure: {}
+
+  ../../../Antigravity/resources/app/extensions/coffeescript: {}
+
+  ../../../Antigravity/resources/app/extensions/configuration-editing: {}
+
+  ../../../Antigravity/resources/app/extensions/cpp: {}
+
+  ../../../Antigravity/resources/app/extensions/csharp: {}
+
+  ../../../Antigravity/resources/app/extensions/css: {}
+
+  ../../../Antigravity/resources/app/extensions/css-language-features: {}
+
+  ../../../Antigravity/resources/app/extensions/css-language-features/server: {}
+
+  ../../../Antigravity/resources/app/extensions/dart: {}
+
+  ../../../Antigravity/resources/app/extensions/debug-auto-launch: {}
+
+  ../../../Antigravity/resources/app/extensions/debug-server-ready: {}
+
+  ../../../Antigravity/resources/app/extensions/diff: {}
+
+  ../../../Antigravity/resources/app/extensions/docker: {}
+
+  ../../../Antigravity/resources/app/extensions/dotenv: {}
+
+  ../../../Antigravity/resources/app/extensions/emmet: {}
+
+  ../../../Antigravity/resources/app/extensions/extension-editing: {}
+
+  ../../../Antigravity/resources/app/extensions/fsharp: {}
+
+  ../../../Antigravity/resources/app/extensions/git: {}
+
+  ../../../Antigravity/resources/app/extensions/git-base: {}
+
+  ../../../Antigravity/resources/app/extensions/github: {}
+
+  ../../../Antigravity/resources/app/extensions/github-authentication: {}
+
+  ../../../Antigravity/resources/app/extensions/go: {}
+
+  ../../../Antigravity/resources/app/extensions/groovy: {}
+
+  ../../../Antigravity/resources/app/extensions/grunt: {}
+
+  ../../../Antigravity/resources/app/extensions/gulp: {}
+
+  ../../../Antigravity/resources/app/extensions/handlebars: {}
+
+  ../../../Antigravity/resources/app/extensions/hlsl: {}
+
+  ../../../Antigravity/resources/app/extensions/html: {}
+
+  ../../../Antigravity/resources/app/extensions/html-language-features: {}
+
+  ../../../Antigravity/resources/app/extensions/html-language-features/server: {}
+
+  ../../../Antigravity/resources/app/extensions/ini: {}
+
+  ../../../Antigravity/resources/app/extensions/ipynb: {}
+
+  ../../../Antigravity/resources/app/extensions/jake: {}
+
+  ../../../Antigravity/resources/app/extensions/java: {}
+
+  ../../../Antigravity/resources/app/extensions/javascript: {}
+
+  ../../../Antigravity/resources/app/extensions/json: {}
+
+  ../../../Antigravity/resources/app/extensions/json-language-features: {}
+
+  ../../../Antigravity/resources/app/extensions/json-language-features/server: {}
+
+  ../../../Antigravity/resources/app/extensions/julia: {}
+
+  ../../../Antigravity/resources/app/extensions/latex: {}
+
+  ../../../Antigravity/resources/app/extensions/less: {}
+
+  ../../../Antigravity/resources/app/extensions/log: {}
+
+  ../../../Antigravity/resources/app/extensions/lua: {}
+
+  ../../../Antigravity/resources/app/extensions/make: {}
+
+  ../../../Antigravity/resources/app/extensions/markdown-basics: {}
+
+  ../../../Antigravity/resources/app/extensions/markdown-language-features: {}
+
+  ../../../Antigravity/resources/app/extensions/markdown-math: {}
+
+  ../../../Antigravity/resources/app/extensions/media-preview: {}
+
+  ../../../Antigravity/resources/app/extensions/merge-conflict: {}
+
+  ../../../Antigravity/resources/app/extensions/mermaid-chat-features: {}
+
+  ../../../Antigravity/resources/app/extensions/microsoft-authentication: {}
+
+  ../../../Antigravity/resources/app/extensions/ms-vscode.js-debug: {}
+
+  ../../../Antigravity/resources/app/extensions/ms-vscode.js-debug-companion: {}
+
+  ../../../Antigravity/resources/app/extensions/ms-vscode.vscode-js-profile-table: {}
+
+  ../../../Antigravity/resources/app/extensions/notebook-renderers: {}
+
+  ../../../Antigravity/resources/app/extensions/npm: {}
+
+  ../../../Antigravity/resources/app/extensions/objective-c: {}
+
+  ../../../Antigravity/resources/app/extensions/perl: {}
+
+  ../../../Antigravity/resources/app/extensions/php: {}
+
+  ../../../Antigravity/resources/app/extensions/php-language-features: {}
+
+  ../../../Antigravity/resources/app/extensions/powershell: {}
+
+  ../../../Antigravity/resources/app/extensions/prompt-basics: {}
+
+  ../../../Antigravity/resources/app/extensions/pug: {}
+
+  ../../../Antigravity/resources/app/extensions/python: {}
+
+  ../../../Antigravity/resources/app/extensions/r: {}
+
+  ../../../Antigravity/resources/app/extensions/razor: {}
+
+  ../../../Antigravity/resources/app/extensions/references-view: {}
+
+  ../../../Antigravity/resources/app/extensions/restructuredtext: {}
+
+  ../../../Antigravity/resources/app/extensions/ruby: {}
+
+  ../../../Antigravity/resources/app/extensions/rust: {}
+
+  ../../../Antigravity/resources/app/extensions/scss: {}
+
+  ../../../Antigravity/resources/app/extensions/search-result: {}
+
+  ../../../Antigravity/resources/app/extensions/shaderlab: {}
+
+  ../../../Antigravity/resources/app/extensions/shellscript: {}
+
+  ../../../Antigravity/resources/app/extensions/simple-browser: {}
+
+  ../../../Antigravity/resources/app/extensions/sql: {}
+
+  ../../../Antigravity/resources/app/extensions/swift: {}
+
+  ../../../Antigravity/resources/app/extensions/terminal-suggest: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-abyss: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-defaults: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-kimbie-dark: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-monokai: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-monokai-dimmed: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-quietlight: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-red: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-seti: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-solarized-dark: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-solarized-light: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-symbols: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-synthwave: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-tokyo-night: {}
+
+  ../../../Antigravity/resources/app/extensions/theme-tomorrow-night-blue: {}
+
+  ../../../Antigravity/resources/app/extensions/tunnel-forwarding: {}
+
+  ../../../Antigravity/resources/app/extensions/typescript-basics: {}
+
+  ../../../Antigravity/resources/app/extensions/typescript-language-features: {}
+
+  ../../../Antigravity/resources/app/extensions/vb: {}
+
+  ../../../Antigravity/resources/app/extensions/xml: {}
+
+  ../../../Antigravity/resources/app/extensions/yaml: {}
+
+  ../../../Dokumen/AIStreaming: {}
+
+  ../../../Dokumen/AIStreaming/openclaw: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/acpx: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/alibaba: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/amazon-bedrock: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/amazon-bedrock-mantle: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/anthropic: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/anthropic-vertex: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/arcee: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/azure-speech: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/bluebubbles: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/bonjour: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/brave: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/browser: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/byteplus: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/cerebras: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/chutes: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/cloudflare-ai-gateway: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/codex: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/comfy: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/copilot-proxy: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/deepgram: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/deepinfra: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/deepseek: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/diagnostics-otel: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/diagnostics-prometheus: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/diffs: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/discord: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/document-extract: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/duckduckgo: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/elevenlabs: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/exa: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/fal: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/feishu: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/file-transfer: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/firecrawl: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/fireworks: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/github-copilot: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/google: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/google-meet: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/googlechat: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/gradium: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/groq: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/huggingface: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/image-generation-core: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/imessage: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/inworld: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/irc: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/kilocode: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/kimi-coding: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/line: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/litellm: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/llm-task: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/lmstudio: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/lobster: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/matrix: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/mattermost: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/media-understanding-core: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/memory-core: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/memory-lancedb: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/memory-wiki: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/microsoft: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/microsoft-foundry: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/migrate-claude: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/migrate-hermes: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/minimax: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/mistral: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/moonshot: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/msteams: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/nextcloud-talk: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/nostr: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/nvidia: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/ollama: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/open-prose: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/openai: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/opencode: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/opencode-go: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/openrouter: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/openshell: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/perplexity: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/qa-channel: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/qa-lab: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/qa-matrix: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/qianfan: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/qqbot: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/qwen: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/runway: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/searxng: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/senseaudio: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/sglang: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/signal: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/skill-workshop: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/slack: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/speech-core: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/stepfun: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/synology-chat: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/synthetic: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/tavily: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/telegram: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/tencent: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/tlon: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/together: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/tokenjuice: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/tts-local-cli: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/twitch: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/venice: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/vercel-ai-gateway: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/video-generation-core: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/vllm: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/voice-call: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/volcengine: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/voyage: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/vydra: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/web-readability: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/webhooks: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/whatsapp: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/xai: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/xiaomi: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/zai: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/zalo: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/extensions/zalouser: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/packages/memory-host-sdk: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/packages/plugin-package-contract: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/packages/plugin-sdk: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/packages/sdk: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/qa/convex-credential-broker: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/ui: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/vendor/a2ui/renderers/angular: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/vendor/a2ui/renderers/lit: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/vendor/a2ui/specification/0.8/eval: {}
+
+  ../../../Dokumen/AIStreaming/openclaw/vendor/a2ui/specification/0.9/eval: {}
+
+  ../../../Dokumen/FasterGit: {}
+
+  ../../../elysia-pagination: {}
+
+  ../../../yt-agent-env/lib/python3.14/site-packages/playwright/driver/package: {}
+
+  ../../../yt-agent-env/lib64/python3.14/site-packages/playwright/driver/package: {}
+
+  ../../packages/shared-types: {}
+
+  ../web: {}
+
+packages:
+
+  '@types/node@22.19.19':
+    resolution: {integrity: sha512-dyh/xO2Fh5bYrfWaaqGrRQQGkNdmYw6AmaAUvYeUMNTWQtvb796ikLdmTchRmOlOiIJ1TDXfWgVx1QkUlQ6Hew==}
+
+  '@types/pg@8.20.0':
+    resolution: {integrity: sha512-bEPFOaMAHTEP1EzpvHTbmwR8UsFyHSKsRisLIHVMXnpNefSbGA1bD6CVy+qKjGSqmZqNqBDV2azOBo8TgkcVow==}
+
+  dotenv@16.6.1:
+    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
+    engines: {node: '>=12'}
+
+  pg-cloudflare@1.4.0:
+    resolution: {integrity: sha512-Vo7z/6rrQYxpNRylp4Tlob2elzbh+N/MOQbxFVWCxS7oEx6jF53GTJFxK2WWpKuBRkmiin4Mt+xofFDjx09R0A==}
+
+  pg-connection-string@2.13.0:
+    resolution: {integrity: sha512-EMnU9E2fSULdsbErBbMaXJvFeD9B4+nPcM3f+4lsiCR0BHLPrLVjv3DbyM2hgQQviKJaTWIRRTjKjWlHg3p2ig==}
+
+  pg-int8@1.0.1:
+    resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
+    engines: {node: '>=4.0.0'}
+
+  pg-pool@3.14.0:
+    resolution: {integrity: sha512-gKtPkFdQPU3DksooVLi9LsjZxrsBUZIpa+7aVx+LV5pNh0KzP4Zleud2po+ConrxbuXGBJ6Hfer6hdgpIBpBaw==}
+    peerDependencies:
+      pg: '>=8.0'
+
+  pg-protocol@1.14.0:
+    resolution: {integrity: sha512-n5taZ1kO3s9ngDTVxsEznOqCyToTgz0FLuPq0B33COy5pPpuWJpY3/2oRBVETuOgzdqRXfWpM9HIhp2LBBT1BA==}
+
+  pg-types@2.2.0:
+    resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
+    engines: {node: '>=4'}
+
+  pg@8.21.0:
+    resolution: {integrity: sha512-AUP1EYJuHraQGsVoCQVIcM7TEJVGtDzxWtGFZd8rds9d+CCXlU5Js1rYgfLNvxy9iJrpHjGrRjoi/3BT9fRyiA==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      pg-native: '>=3.0.1'
+    peerDependenciesMeta:
+      pg-native:
+        optional: true
+
+  pgpass@1.0.5:
+    resolution: {integrity: sha512-FdW9r/jQZhSeohs1Z3sI1yxFQNFvMcnmfuj4WBMUTxOrAyLMaTcE1aAMBiTlbMNaXvBCQuVi0R7hd8udDSP7ug==}
+
+  postgres-array@2.0.0:
+    resolution: {integrity: sha512-VpZrUqU5A69eQyW2c5CA1jtLecCsN2U/bD6VilrFDWq5+5UIEVO7nazS3TEcHf1zuPYO/sqGvUvW62g86RXZuA==}
+    engines: {node: '>=4'}
+
+  postgres-bytea@1.0.1:
+    resolution: {integrity: sha512-5+5HqXnsZPE65IJZSMkZtURARZelel2oXUEO8rH83VS/hxH5vv1uHquPg5wZs8yMAfdv971IU+kcPUczi7NVBQ==}
+    engines: {node: '>=0.10.0'}
+
+  postgres-date@1.0.7:
+    resolution: {integrity: sha512-suDmjLVQg78nMK2UZ454hAG+OAW+HQPZ6n++TNDUX+L0+uUlLywnoxJKDou51Zm+zTCjrCl0Nq6J9C5hP9vK/Q==}
+    engines: {node: '>=0.10.0'}
+
+  postgres-interval@1.2.0:
+    resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
+    engines: {node: '>=0.10.0'}
+
+  postgres@3.4.9:
+    resolution: {integrity: sha512-GD3qdB0x1z9xgFI6cdRD6xu2Sp2WCOEoe3mtnyB5Ee0XrrL5Pe+e4CCnJrRMnL1zYtRDZmQQVbvOttLnKDLnaw==}
+    engines: {node: '>=12'}
+
+  split2@4.2.0:
+    resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
+    engines: {node: '>= 10.x'}
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
+  xtend@4.0.2:
+    resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
+    engines: {node: '>=0.4'}
+
+snapshots:
+
+  '@types/node@22.19.19':
+    dependencies:
+      undici-types: 6.21.0
+
+  '@types/pg@8.20.0':
+    dependencies:
+      '@types/node': 22.19.19
+      pg-protocol: 1.14.0
+      pg-types: 2.2.0
+
+  dotenv@16.6.1: {}
+
+  pg-cloudflare@1.4.0:
+    optional: true
+
+  pg-connection-string@2.13.0: {}
+
+  pg-int8@1.0.1: {}
+
+  pg-pool@3.14.0(pg@8.21.0):
+    dependencies:
+      pg: 8.21.0
+
+  pg-protocol@1.14.0: {}
+
+  pg-types@2.2.0:
+    dependencies:
+      pg-int8: 1.0.1
+      postgres-array: 2.0.0
+      postgres-bytea: 1.0.1
+      postgres-date: 1.0.7
+      postgres-interval: 1.2.0
+
+  pg@8.21.0:
+    dependencies:
+      pg-connection-string: 2.13.0
+      pg-pool: 3.14.0(pg@8.21.0)
+      pg-protocol: 1.14.0
+      pg-types: 2.2.0
+      pgpass: 1.0.5
+    optionalDependencies:
+      pg-cloudflare: 1.4.0
+
+  pgpass@1.0.5:
+    dependencies:
+      split2: 4.2.0
+
+  postgres-array@2.0.0: {}
+
+  postgres-bytea@1.0.1: {}
+
+  postgres-date@1.0.7: {}
+
+  postgres-interval@1.2.0:
+    dependencies:
+      xtend: 4.0.2
+
+  postgres@3.4.9: {}
+
+  split2@4.2.0: {}
+
+  typescript@5.9.3: {}
+
+  undici-types@6.21.0: {}
+
+  xtend@4.0.2: {}
