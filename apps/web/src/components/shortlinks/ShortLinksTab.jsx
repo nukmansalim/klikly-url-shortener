@@ -1,65 +1,84 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LinkItem from "./LinkItem";
 import CreateLinkModal from "./CreateLinkModal";
-
-const MOCK_LINKS = [
-  {
-    id: "1",
-    shortCode: "promo24",
-    originalUrl: "https://www.example.com/very/long/url/for/marketing/campaign/2024",
-    title: "Summer Promo 2024",
-    clicks: 1245,
-    isActive: true,
-    createdAt: "2024-08-01T10:00:00Z"
-  },
-  {
-    id: "2",
-    shortCode: "x7k9p",
-    originalUrl: "https://www.google.com/search?q=url+shortener",
-    title: "",
-    clicks: 342,
-    isActive: true,
-    createdAt: "2024-08-15T14:30:00Z"
-  },
-  {
-    id: "3",
-    shortCode: "ig-bio",
-    originalUrl: "https://my-portfolio-website.com/about-me",
-    title: "Instagram Bio Link",
-    clicks: 8900,
-    isActive: false,
-    createdAt: "2024-01-10T08:15:00Z"
-  }
-];
+import api from "../../services/api";
 
 export default function ShortLinksTab() {
-  const [links, setLinks] = useState(MOCK_LINKS);
+  const [links, setLinks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleDelete = (id) => {
-    if (window.confirm("Are you sure you want to delete this link?")) {
-      setLinks(links.filter(link => link.id !== id));
+  // Fetch links from backend
+  useEffect(() => {
+    fetchLinks();
+  }, []);
+
+  const fetchLinks = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await api.getLinks();
+      if (response.success && Array.isArray(response.data)) {
+        setLinks(response.data);
+      } else {
+        setError("Format respons tidak valid");
+      }
+    } catch (err) {
+      console.error("Gagal memuat link:", err);
+      setError(err.message || "Gagal memuat data dari server");
+    } finally {
+      setLoading(false);
     }
   };
 
-  const handleToggleStatus = (id) => {
-    setLinks(links.map(link => 
-      link.id === id ? { ...link, isActive: !link.isActive } : link
-    ));
+  const handleDelete = async (id) => {
+    if (window.confirm("Are you sure you want to delete this link?")) {
+      try {
+        await api.deleteLink(id);
+        setLinks(links.filter(link => link.id !== id));
+      } catch (err) {
+        alert(err.message || "Gagal menghapus link");
+      }
+    }
   };
 
-  const handleCreate = (data) => {
-    const newLink = {
-      id: Math.random().toString(36).substr(2, 9),
-      shortCode: Math.random().toString(36).substr(2, 6),
-      originalUrl: data.originalUrl,
-      title: data.title,
-      clicks: 0,
-      isActive: true,
-      createdAt: new Date().toISOString()
-    };
-    setLinks([newLink, ...links]);
+  const handleToggleStatus = async (id) => {
+    const linkToToggle = links.find(l => l.id === id);
+    if (!linkToToggle) return;
+
+    try {
+      const updatedStatus = !linkToToggle.isActive;
+      const response = await api.updateLink(id, { isActive: updatedStatus });
+      if (response.success && response.data) {
+        setLinks(links.map(link => 
+          link.id === id ? response.data : link
+        ));
+      } else {
+        setLinks(links.map(link => 
+          link.id === id ? { ...link, isActive: updatedStatus } : link
+        ));
+      }
+    } catch (err) {
+      alert(err.message || "Gagal memperbarui status link");
+    }
+  };
+
+  const handleCreate = async (data) => {
+    try {
+      const response = await api.createLink({
+        originalUrl: data.originalUrl,
+        title: data.title || undefined
+      });
+      if (response.success && response.data) {
+        setLinks([response.data, ...links]);
+      } else {
+        fetchLinks();
+      }
+    } catch (err) {
+      alert(err.message || "Gagal membuat link pendek");
+    }
   };
 
   const filteredLinks = links.filter(link => {
@@ -71,17 +90,17 @@ export default function ShortLinksTab() {
   });
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       {/* Header Actions */}
       <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
         <div className="relative flex-1 max-w-md w-full">
-          <i className="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-[color:var(--muted)]"></i>
+          <i className="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-(--muted)"></i>
           <input 
             type="text" 
             placeholder="Search links..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-11 pr-4 py-2.5 rounded-xl bg-[color:var(--bg)] border border-[color:var(--line)] focus:outline-none focus:border-[color:var(--accent)] focus:ring-1 focus:ring-[color:var(--accent)] text-[color:var(--primary)] transition-all shadow-sm"
+            className="w-full pl-11 pr-4 py-2.5 rounded-xl bg-(--bg) border border-(--line) focus:outline-none focus:border-(--accent) focus:ring-1 focus:ring-(--accent) text-(--primary) transition-all shadow-sm"
           />
         </div>
         
@@ -94,9 +113,21 @@ export default function ShortLinksTab() {
         </button>
       </div>
 
+      {error && (
+        <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 text-sm flex justify-between items-center animate-fade-in">
+          <span>{error}</span>
+          <button onClick={fetchLinks} className="underline hover:text-red-400 font-bold">Retry</button>
+        </div>
+      )}
+
       {/* List Container */}
       <div className="space-y-4">
-        {filteredLinks.length > 0 ? (
+        {loading ? (
+          <div className="card p-12 flex flex-col items-center justify-center text-center">
+            <i className="fa-solid fa-circle-notch fa-spin text-3xl text-(--accent) mb-3"></i>
+            <p className="text-(--muted) text-sm">Loading your links...</p>
+          </div>
+        ) : filteredLinks.length > 0 ? (
           filteredLinks.map(link => (
             <LinkItem 
               key={link.id} 
@@ -107,11 +138,11 @@ export default function ShortLinksTab() {
           ))
         ) : (
           <div className="card p-12 flex flex-col items-center justify-center text-center border-dashed">
-            <div className="w-16 h-16 rounded-full bg-[color:var(--line)] flex items-center justify-center mb-4 text-[color:var(--muted)] text-2xl">
+            <div className="w-16 h-16 rounded-full bg-(--line) flex items-center justify-center mb-4 text-(--muted) text-2xl">
               <i className="fa-solid fa-link-slash"></i>
             </div>
-            <h3 className="text-lg font-bold text-[color:var(--primary)] mb-1">No links found</h3>
-            <p className="text-[color:var(--muted)] max-w-sm">
+            <h3 className="text-lg font-bold text-(--primary) mb-1">No links found</h3>
+            <p className="text-(--muted) max-w-sm">
               {searchQuery ? "We couldn't find any links matching your search." : "You haven't created any short links yet. Click the button above to get started."}
             </p>
           </div>

@@ -18,7 +18,7 @@ export default function MobilePreview({ profile, links, theme }) {
         
         {/* Phone Notch */}
         <div className="absolute top-0 inset-x-0 h-6 bg-black rounded-b-2xl w-32 mx-auto z-20"></div>
-
+ 
         {/* Screen Content */}
         <div className={`flex-1 overflow-y-auto ${bgClass} transition-colors duration-300 relative scrollbar-hide`}>
           
@@ -33,8 +33,8 @@ export default function MobilePreview({ profile, links, theme }) {
             
             {/* Profile Section */}
             <div className="flex flex-col items-center text-center mb-8">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-[color:var(--accent)] to-[color:var(--primary)] mb-4 p-1 shadow-lg">
-                <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-2xl font-bold text-[color:var(--primary)]">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-(--accent) to-(--primary) mb-4 p-1 shadow-lg">
+                <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-2xl font-bold text-(--primary)">
                   {profile.avatar ? (
                     <img src={profile.avatar} alt="Avatar" className="w-full h-full object-cover" />
                   ) : (

@@ -36,8 +36,8 @@ export default function LinkEditor({ profile, setProfile, links, setLinks, theme
     <div className="space-y-8 pb-10">
       
       {/* Profile Settings */}
-      <div className="card p-6 border-[color:var(--line)]">
-        <h3 className="heading-font text-lg font-bold text-[color:var(--primary)] mb-4 flex items-center gap-2">
+      <div className="card p-6 border-(--line)">
+        <h3 className="heading-font text-lg font-bold text-(--primary) mb-4 flex items-center gap-2">
           <i className="fa-solid fa-user-astronaut"></i>
           Profile
         </h3>
@@ -45,7 +45,7 @@ export default function LinkEditor({ profile, setProfile, links, setLinks, theme
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1">
-              <label className="block text-sm font-medium text-[color:var(--secondary)] mb-1">
+              <label className="block text-sm font-medium text-(--secondary) mb-1">
                 Display Name
               </label>
               <input 
@@ -54,29 +54,29 @@ export default function LinkEditor({ profile, setProfile, links, setLinks, theme
                 value={profile.displayName}
                 onChange={handleProfileChange}
                 placeholder="e.g. John Doe"
-                className="w-full px-4 py-2 rounded-lg bg-[color:var(--bg)] border border-[color:var(--line)] focus:outline-none focus:border-[color:var(--accent)] text-[color:var(--primary)] transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-(--bg) border border-(--line) focus:outline-none focus:border-(--accent) text-(--primary) transition-all"
               />
             </div>
             <div className="flex-1">
-              <label className="block text-sm font-medium text-[color:var(--secondary)] mb-1">
+              <label className="block text-sm font-medium text-(--secondary) mb-1">
                 Username (URL)
               </label>
               <div className="flex items-center">
-                <span className="px-3 py-2 bg-[color:var(--line)] text-[color:var(--muted)] rounded-l-lg border border-[color:var(--line)] border-r-0 text-sm">klikly.id/</span>
+                <span className="px-3 py-2 bg-(--line) text-(--muted) rounded-l-lg border border-(--line) border-r-0 text-sm">klikly.id/</span>
                 <input 
                   type="text" 
                   name="username"
                   value={profile.username}
                   onChange={handleProfileChange}
                   placeholder="johndoe"
-                  className="w-full px-4 py-2 rounded-r-lg bg-[color:var(--bg)] border border-[color:var(--line)] focus:outline-none focus:border-[color:var(--accent)] text-[color:var(--primary)] transition-all"
+                  className="w-full px-4 py-2 rounded-r-lg bg-(--bg) border border-(--line) focus:outline-none focus:border-(--accent) text-(--primary) transition-all"
                 />
               </div>
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-[color:var(--secondary)] mb-1">
+            <label className="block text-sm font-medium text-(--secondary) mb-1">
               Bio
             </label>
             <textarea 
@@ -85,28 +85,28 @@ export default function LinkEditor({ profile, setProfile, links, setLinks, theme
               onChange={handleProfileChange}
               placeholder="Tell your audience who you are..."
               rows={2}
-              className="w-full px-4 py-2 rounded-lg bg-[color:var(--bg)] border border-[color:var(--line)] focus:outline-none focus:border-[color:var(--accent)] text-[color:var(--primary)] transition-all resize-none"
+              className="w-full px-4 py-2 rounded-lg bg-(--bg) border border-(--line) focus:outline-none focus:border-(--accent) text-(--primary) transition-all resize-none"
             />
           </div>
         </div>
       </div>
 
       {/* Theme Settings */}
-      <div className="card p-6 border-[color:var(--line)]">
-        <h3 className="heading-font text-lg font-bold text-[color:var(--primary)] mb-4 flex items-center gap-2">
+      <div className="card p-6 border-(--line)">
+        <h3 className="heading-font text-lg font-bold text-(--primary) mb-4 flex items-center gap-2">
           <i className="fa-solid fa-palette"></i>
           Theme
         </h3>
         <div className="flex gap-4">
           <button 
             onClick={() => setTheme('light')}
-            className={`flex-1 py-3 rounded-xl border-2 transition-all font-medium ${theme === 'light' ? 'border-[color:var(--primary)] text-[color:var(--primary)] bg-slate-50' : 'border-[color:var(--line)] text-[color:var(--muted)] hover:border-[color:var(--accent)]'}`}
+            className={`flex-1 py-3 rounded-xl border-2 transition-all font-medium ${theme === 'light' ? 'border-(--primary) text-(--primary) bg-slate-50' : 'border-(--line) text-(--muted) hover:border-(--accent)'}`}
           >
             Light Theme
           </button>
           <button 
             onClick={() => setTheme('dark')}
-            className={`flex-1 py-3 rounded-xl border-2 transition-all font-medium ${theme === 'dark' ? 'border-[color:var(--primary)] text-[color:var(--primary)] bg-slate-50' : 'border-[color:var(--line)] text-[color:var(--muted)] hover:border-[color:var(--accent)]'}`}
+            className={`flex-1 py-3 rounded-xl border-2 transition-all font-medium ${theme === 'dark' ? 'border-(--primary) text-(--primary) bg-slate-50' : 'border-(--line) text-(--muted) hover:border-(--accent)'}`}
           >
             Dark Theme
           </button>
@@ -114,9 +114,9 @@ export default function LinkEditor({ profile, setProfile, links, setLinks, theme
       </div>
 
       {/* Links Management */}
-      <div className="card p-6 border-[color:var(--line)]">
+      <div className="card p-6 border-(--line)">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="heading-font text-lg font-bold text-[color:var(--primary)] flex items-center gap-2">
+          <h3 className="heading-font text-lg font-bold text-(--primary) flex items-center gap-2">
             <i className="fa-solid fa-link"></i>
             Links
           </h3>
@@ -131,12 +131,12 @@ export default function LinkEditor({ profile, setProfile, links, setLinks, theme
 
         <div className="space-y-4">
           {links.length === 0 ? (
-            <div className="text-center py-8 border-2 border-dashed border-[color:var(--line)] rounded-xl text-[color:var(--muted)]">
+            <div className="text-center py-8 border-2 border-dashed border-(--line) rounded-xl text-(--muted)">
               You haven't added any links yet.
             </div>
           ) : (
             links.map((link, index) => (
-              <div key={link.id} className={`p-4 rounded-xl border-2 transition-all ${link.isActive ? 'border-[color:var(--line)] bg-[color:var(--surface)]' : 'border-[color:var(--line)] bg-[color:var(--bg)] opacity-70'}`}>
+              <div key={link.id} className={`p-4 rounded-xl border-2 transition-all ${link.isActive ? 'border-(--line) bg-(--surface)' : 'border-(--line) bg-(--bg) opacity-70'}`}>
                 <div className="flex justify-between items-start gap-4 mb-3">
                   <div className="flex-1">
                     <input 
@@ -144,14 +144,14 @@ export default function LinkEditor({ profile, setProfile, links, setLinks, theme
                       value={link.title}
                       onChange={(e) => updateLink(link.id, 'title', e.target.value)}
                       placeholder="Title"
-                      className="w-full font-bold text-[color:var(--primary)] bg-transparent border-none focus:outline-none mb-1 px-1"
+                      className="w-full font-bold text-(--primary) bg-transparent border-none focus:outline-none mb-1 px-1"
                     />
                     <input 
                       type="text"
                       value={link.url}
                       onChange={(e) => updateLink(link.id, 'url', e.target.value)}
                       placeholder="URL"
-                      className="w-full text-sm text-[color:var(--accent)] bg-transparent border-none focus:outline-none px-1"
+                      className="w-full text-sm text-(--accent) bg-transparent border-none focus:outline-none px-1"
                     />
                   </div>
                   
@@ -166,7 +166,7 @@ export default function LinkEditor({ profile, setProfile, links, setLinks, theme
                     </button>
                     <button 
                       onClick={() => removeLink(link.id)}
-                      className="w-8 h-8 rounded-lg flex items-center justify-center border border-[color:var(--line)] text-red-400 hover:text-red-500 hover:bg-red-50 transition-all bg-white"
+                      className="w-8 h-8 rounded-lg flex items-center justify-center border border-(--line) text-red-400 hover:text-red-500 hover:bg-red-50 transition-all bg-white"
                       title="Delete"
                     >
                       <i className="fa-solid fa-trash-can"></i>

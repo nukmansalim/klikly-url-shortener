@@ -38,7 +38,7 @@ export default function Dashboard() {
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <main className="main-area">
         <Topbar activeTab={activeTab} setMobileMenuOpen={setMobileMenuOpen} />
-        <section className="content" style={{ gridTemplateColumns: "1fr" }}>
+        <section className="content" style={{ gridTemplateColumns: "minmax(0, 1fr)" }}>
           {tabContent[activeTab]}
         </section>
       </main>

@@ -37,12 +37,12 @@ export default function LinkInBioTab() {
     setTimeout(() => {
       btn.innerHTML = '<i class="fa-solid fa-check"></i> Saved!';
       btn.classList.add("bg-green-500");
-      btn.classList.remove("bg-[color:var(--primary)]");
+      btn.classList.remove("bg-(--primary)");
       
       setTimeout(() => {
         btn.innerHTML = originalText;
         btn.classList.remove("bg-green-500");
-        btn.classList.add("bg-[color:var(--primary)]");
+        btn.classList.add("bg-(--primary)");
         btn.disabled = false;
       }, 2000);
     }, 800);
@@ -51,15 +51,15 @@ export default function LinkInBioTab() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center bg-white p-6 rounded-2xl border border-[color:var(--line)] shadow-sm">
+      <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center bg-white p-6 rounded-2xl border border-(--line) shadow-sm">
         <div>
-          <h2 className="heading-font text-2xl font-bold text-[color:var(--primary)] mb-1">Link-in-Bio Setup</h2>
-          <p className="text-[color:var(--muted)]">Build your custom landing page to share all your links.</p>
+          <h2 className="heading-font text-2xl font-bold text-(--primary) mb-1">Link-in-Bio Setup</h2>
+          <p className="text-(--muted)">Build your custom landing page to share all your links.</p>
         </div>
         
         <div className="flex gap-3">
           <button 
-            className="px-4 py-2.5 rounded-xl font-medium bg-[color:var(--bg)] border border-[color:var(--line)] text-[color:var(--secondary)] hover:text-[color:var(--accent)] hover:border-[color:var(--accent)] transition-all flex items-center gap-2 whitespace-nowrap"
+            className="px-4 py-2.5 rounded-xl font-medium bg-(--bg) border border-(--line) text-(--secondary) hover:text-(--accent) hover:border-(--accent) transition-all flex items-center gap-2 whitespace-nowrap"
           >
             <i className="fa-solid fa-arrow-up-right-from-square"></i>
             Open Live
@@ -93,7 +93,7 @@ export default function LinkInBioTab() {
         {/* Right: Live Preview */}
         <div className="hidden lg:block w-[380px] flex-shrink-0 relative">
           <div className="sticky top-6">
-            <h3 className="heading-font text-lg font-bold text-[color:var(--primary)] mb-4 text-center">Live Preview</h3>
+            <h3 className="heading-font text-lg font-bold text-(--primary) mb-4 text-center">Live Preview</h3>
             <MobilePreview profile={profile} links={links} theme={theme} />
           </div>
         </div>
